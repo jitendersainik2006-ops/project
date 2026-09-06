@@ -1,0 +1,17 @@
+{
+  "name": "smart-appointment-lead-management",
+  "version": "1.0.0",
+  "description": "MERN-style capstone project for appointment booking, lead tracking, customer management, analytics, reminders, and notices.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "mern",
+    "appointment",
+    "lead-management",
+    "capstone"
+  ],
+  "license": "MIT"
+}

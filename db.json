@@ -1,0 +1,54 @@
+{
+  "appointments": [
+    {
+      "id": "apt-1001",
+      "name": "Riya Sharma",
+      "phone": "9876543210",
+      "service": "Career Counselling",
+      "date": "2026-09-08",
+      "time": "10:30",
+      "status": "Confirmed",
+      "notes": "Interested in weekend batches"
+    },
+    {
+      "id": "apt-1002",
+      "name": "Aman Verma",
+      "phone": "9123456780",
+      "service": "Admission Discussion",
+      "date": "2026-09-09",
+      "time": "15:00",
+      "status": "Pending",
+      "notes": "Needs fee structure"
+    }
+  ],
+  "leads": [
+    {
+      "id": "lead-2001",
+      "name": "Karan Singh",
+      "phone": "9988776655",
+      "source": "WhatsApp",
+      "interest": "Full Stack Course",
+      "stage": "New",
+      "value": 18000
+    },
+    {
+      "id": "lead-2002",
+      "name": "Meena Patel",
+      "phone": "9876501234",
+      "source": "Website",
+      "interest": "Data Analytics",
+      "stage": "Follow-up",
+      "value": 22000
+    },
+    {
+      "id": "lead-2003",
+      "name": "Harsh Saini",
+      "phone": "9012345678",
+      "source": "Referral",
+      "interest": "MERN Development",
+      "stage": "Converted",
+      "value": 30000
+    }
+  ],
+  "contacts": []
+}

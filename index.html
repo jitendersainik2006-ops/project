@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Smart appointment booking and lead management platform for clinics, coaching centers, and service teams.">
+  <title>Smart Appointment & Lead Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Home">
+      <span class="brand-mark">A</span>
+      <span>
+        <strong>ATITECH CRM</strong>
+        <small>Appointment + Leads</small>
+      </span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#features">Features</a>
+      <a href="#booking">Book</a>
+      <a href="#leads">Leads</a>
+      <a href="#analytics">Analytics</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle theme">Dark</button>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu">Menu</button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">MERN Development Major Capstone Project</p>
+        <h1>Smart Appointment & Lead Management Website</h1>
+        <p class="hero-text">A premium CRM-style platform for clinics, coaching centers, and service businesses to manage bookings, track leads, reduce missed follow-ups, and improve revenue decisions.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#booking">Book Appointment</a>
+          <a class="btn secondary" href="#leads">View Dashboard</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Project highlights">
+        <div class="orbit">A</div>
+        <div class="mini-grid">
+          <span>Booking</span>
+          <span>Lead Tracking</span>
+          <span>Analytics</span>
+          <span>Reminders</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="stats-strip" id="analytics">
+      <article><strong id="totalAppointments">0</strong><span>Appointments</span></article>
+      <article><strong id="totalLeads">0</strong><span>Leads</span></article>
+      <article><strong id="convertedLeads">0</strong><span>Converted</span></article>
+      <article><strong id="conversionRate">0%</strong><span>Conversion Rate</span></article>
+    </section>
+
+    <section class="section" id="features">
+      <div class="section-head">
+        <p class="eyebrow">Project Modules</p>
+        <h2>Everything required in a complete capstone</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="glass-card">
+          <span class="card-icon">01</span>
+          <h3>Appointment Booking</h3>
+          <p>Capture visitor name, phone, service, preferred date, time, and notes with frontend and backend validation.</p>
+        </article>
+        <article class="glass-card">
+          <span class="card-icon">02</span>
+          <h3>Lead Tracking</h3>
+          <p>Manage leads by source, interest, stage, and potential value for structured follow-up.</p>
+        </article>
+        <article class="glass-card">
+          <span class="card-icon">03</span>
+          <h3>Customer Management</h3>
+          <p>View recent customer requests and appointment pipeline in a clean admin dashboard layout.</p>
+        </article>
+        <article class="glass-card">
+          <span class="card-icon">04</span>
+          <h3>Analytics Dashboard</h3>
+          <p>Track bookings, confirmed appointments, converted leads, and revenue opportunities.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="dashboard">
+      <div class="panel booking-panel" id="booking">
+        <div class="section-head compact">
+          <p class="eyebrow">Appointment Booking</p>
+          <h2>Schedule a consultation</h2>
+        </div>
+        <form id="appointmentForm" class="form-grid" novalidate>
+          <label>Full Name<input name="name" type="text" placeholder="Enter customer name" required></label>
+          <label>Phone Number<input name="phone" type="tel" placeholder="10 digit phone number" pattern="[0-9]{10}" required></label>
+          <label>Service
+            <select name="service" required>
+              <option value="">Choose service</option>
+              <option>Career Counselling</option>
+              <option>Admission Discussion</option>
+              <option>MERN Development</option>
+              <option>Data Analytics</option>
+              <option>Clinic Consultation</option>
+            </select>
+          </label>
+          <label>Date<input name="date" type="date" required></label>
+          <label>Time<input name="time" type="time" required></label>
+          <label class="full">Notes<textarea name="notes" rows="3" placeholder="Follow-up details"></textarea></label>
+          <button class="btn primary full" type="submit">Submit Appointment</button>
+          <p class="form-message full" id="appointmentMessage"></p>
+        </form>
+      </div>
+
+      <div class="panel notice-panel">
+        <div class="section-head compact">
+          <p class="eyebrow">Notice Board</p>
+          <h2>Today&apos;s operations</h2>
+        </div>
+        <ul class="notice-list">
+          <li><strong>10:30 AM</strong><span>Counselling session confirmation pending.</span></li>
+          <li><strong>03:00 PM</strong><span>Admission enquiry follow-up call.</span></li>
+          <li><strong>06:00 PM</strong><span>Send brochure to new WhatsApp leads.</span></li>
+        </ul>
+        <div class="reminder-card">
+          <span>Reminder</span>
+          <strong>Follow-up within 24 hours improves conversions.</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="leads">
+      <div class="section-head">
+        <p class="eyebrow">Lead Management</p>
+        <h2>Track every enquiry from first contact to conversion</h2>
+      </div>
+      <div class="toolbar">
+        <input id="leadSearch" type="search" placeholder="Search leads by name, source, interest, or stage">
+        <button class="btn secondary" id="addDemoLead" type="button">Add Demo Lead</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Phone</th>
+              <th>Source</th>
+              <th>Interest</th>
+              <th>Stage</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody id="leadRows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section split">
+      <div>
+        <p class="eyebrow">Tech Stack</p>
+        <h2>Designed like a real MERN project</h2>
+        <div class="stack-list">
+          <span>Frontend: HTML, CSS, JavaScript, React-ready structure</span>
+          <span>Backend: Node.js REST API</span>
+          <span>Database: JSON demo storage, MongoDB-ready</span>
+          <span>Tools: GitHub, Vercel/Render-ready deployment</span>
+        </div>
+      </div>
+      <div class="impact-card">
+        <p>Outcome & Impact</p>
+        <strong>15-30%</strong>
+        <span>Potential revenue growth through faster follow-up and data-driven decisions.</span>
+      </div>
+    </section>
+
+    <section class="section faq-section">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2>Project explanation points</h2>
+      </div>
+      <details open>
+        <summary>Is this a MERN project?</summary>
+        <p>Yes. It follows MERN-style architecture with a Node API and frontend client. MongoDB can be connected later by replacing the JSON file functions with database models.</p>
+      </details>
+      <details>
+        <summary>Can it be used for clinics and coaching centers?</summary>
+        <p>Yes. Services, lead sources, stages, and appointment fields are generic and can be customized for both use cases.</p>
+      </details>
+      <details>
+        <summary>Does it include validation?</summary>
+        <p>Yes. The appointment form validates required fields and a 10 digit phone number before sending data to the backend.</p>
+      </details>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>Capture customer messages</h2>
+        <p>Use this form to store website enquiries in the backend demo database.</p>
+      </div>
+      <form id="contactForm" class="contact-form">
+        <input name="name" type="text" placeholder="Your name" required>
+        <input name="email" type="email" placeholder="Email address" required>
+        <textarea name="message" rows="4" placeholder="Message" required></textarea>
+        <button class="btn primary" type="submit">Send Message</button>
+        <p class="form-message" id="contactMessage"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <strong>Smart Appointment & Lead Management</strong>
+    <span>Built for MERN capstone submission with practical problem solving and real-world value.</span>
+  </footer>
+</body>
+</html>
